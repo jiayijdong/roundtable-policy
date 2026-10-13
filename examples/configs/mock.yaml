@@ -1,0 +1,16 @@
+# Offline demo: every agent is a deterministic mock, no API key needed.
+# Player `quality` is hidden from the framework; Roundtable has to discover it
+# through the grader committee and the confidence-weight table.
+players:
+  - {backend: mock, name: player_a, quality: 0.85}
+  - {backend: mock, name: player_b, quality: 0.70}
+  - {backend: mock, name: player_c, quality: 0.55}
+  - {backend: mock, name: player_d, quality: 0.40}
+graders:
+  - {backend: mock, name: grader_1}
+  - {backend: mock, name: grader_2}
+  - {backend: mock, name: grader_3}
+fusion: {backend: mock, name: fusion}
+dimensions: [overall]   # used when a task does not list its own dimensions
+max_workers: 8
+seed: 0

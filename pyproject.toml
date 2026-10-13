@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roundtable-policy"
+version = "0.1.0"
+description = "Roundtable Policy: confidence-weighted consensus for multi-agent LLM reasoning"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic"]
+all = ["openai>=1.0", "anthropic"]
+dev = ["pytest"]
+
+[project.scripts]
+roundtable = "roundtable.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["roundtable*"]
