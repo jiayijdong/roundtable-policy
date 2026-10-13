@@ -26,8 +26,7 @@ Roundtable Policy works the way a committee does. Members propose answers indepe
 ## Install
 
 ```bash
-git clone https://github.com/jiayijdong/roundtable-policy.git
-cd roundtable-policy
+# from the root of this repository
 pip install -e ".[all]"        # or ".[openai]" / ".[anthropic]"; add ",dev" for pytest
 ```
 
